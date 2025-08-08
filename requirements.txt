@@ -1,0 +1,9 @@
+Flask
+python-dotenv
+comtypes
+geocoder
+beautifulsoup4
+requests
+pywhatkit
+pyttsx3
+gunicorn
