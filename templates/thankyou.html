@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Thank You</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 </head>
 <body>
     <section class="thankyou-section" style="text-align:center; padding:8rem 2rem;">
         <h2>Thank you for contacting me, {{ name }}! Your message has been sent.</h2>
-        <a href="https://jatinsadhpatva.netlify.app/" class="btn" style="margin-top:2rem;">Back to Home</a>
+        
+        <p style="margin-top:1rem;">You will be redirected back to the homepage in 5 seconds.</p>
+
+        <a href="https://jatinsadhpatva.netlify.app/" class="btn" style="margin-top:2rem;">Back to Home Now</a>
     </section>
+
+    <script>
+        setTimeout(function() {
+            // After 5 seconds, change the page location to your Netlify site
+            window.location.href = "https://jatinsadhpatva.netlify.app/";
+        }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
 </body>
 </html>
